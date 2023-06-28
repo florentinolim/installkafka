@@ -64,7 +64,3 @@ A ansible role faz a instação e tunning de vários componentes como:
 
 - https://github.com/sleighzy/ansible-kafka
 
-
-## Autores
-
-Time GESIN!
