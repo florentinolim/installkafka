@@ -1,0 +1,13 @@
+[server-1]
+pxkf01.localhost
+
+[server-2]
+pxkf02.localhost
+
+[server-3]
+pxkf03.localhost
+
+[zookeeper-nodes:children]
+server-1
+server-2
+server-3

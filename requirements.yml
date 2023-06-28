@@ -1,0 +1,22 @@
+---
+- src: https://github.com/sleighzy/ansible-zookeeper.git
+  name: zookeeper
+  version: v1.2.5
+
+- src: https://github.com/sleighzy/ansible-kafka.git
+  name: kafka
+  version: v3.1.1
+
+- src: https://github.com/geerlingguy/ansible-role-java.git
+  name: java
+  version: 1.10.0
+
+- src: https://github.com/linux-system-roles/kernel_settings.git
+  name: kernel-settings
+  version: 1.1.10
+
+- src: git+http://pxgc01/automacao/ansible-roles/ansible-role-ulimit.git
+  name: ulimit
+  version: 2.2.1
+
+

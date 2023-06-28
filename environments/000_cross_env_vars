@@ -1,0 +1,59 @@
+---
+domain: "energia.org.br"
+
+# kernel role
+kernel_settings_sysctl:
+  - name: kernel.threads-max
+    value: 29968
+  - name: vm.max_map_count
+    value: 262144
+  - name: fs.epoll.max_user_watches
+    value: 785592
+  - name: fs.file-max
+    value: 379724
+  - name: vm.swappiness
+    value: 10
+  - name: net.ipv4.tcp_retries2
+    value: 5
+
+# ulimit role
+ulimit_items:
+  - limit_item: nofile
+    domain: kafka
+    limit_type: soft
+    value: 1048576
+  - limit_item: memlock
+    domain: kafka
+    limit_type: 'soft'
+    value: unlimited
+  - limit_item: memlock
+    domain: kafka
+    limit_type: 'hard'
+    value: unlimited
+  - limit_item: nproc
+    domain: kafka
+    limit_type: soft
+    value: 4096
+  - limit_item: nproc
+    domain: kafka
+    limit_type: hard
+    value: 4096
+
+# java role
+java_packages:
+  - java-11-openjdk
+
+# zookeeper role
+zookeeper_mirror: "https://downloads.apache.org/zookeeper"
+zookeeper_version: 3.7.1
+ansible_nodename: "{{ ansible_fqdn }}"
+zookeeper_data_dir: /opt/aplicacoes/zookeeper
+zookeeper_data_log_dir: /opt/aplicacoes/zookeeper
+
+# kafka role 
+kafka_version: 3.2.3
+kafka_scala_version: 2.13
+kafka_download_base_url: "https://downloads.apache.org/kafka"
+kafka_root_dir: /opt/aplicacoes/kafka
+kafka_data_log_dirs: "{{ kafka_root_dir }}/kafka/logs"
+kafka_auto_create_topics_enable: true

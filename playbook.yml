@@ -1,0 +1,29 @@
+---
+- name: Deploying microservice
+  hosts: zookeeper-nodes
+  become: true
+  roles:
+    - role: kernel-settings
+    - role: ulimit
+    - role: java
+
+- name: Deploying microservice
+  hosts: server-1
+  become: true
+  roles:
+    - role: zookeeper
+    - role: kafka
+
+- name: Deploying microservice
+  hosts: server-2
+  become: true
+  roles:
+    - role: zookeeper
+    - role: kafka
+
+- name: Deploying microservice
+  hosts: server-3
+  become: true
+  roles:
+    - role: zookeeper
+    - role: kafka

@@ -1,0 +1,13 @@
+[server-1]
+dxkf01.energia.org.br
+
+[server-2]
+dxkf02.energia.org.br
+
+[server-3]
+dxkf03.energia.org.br
+
+[zookeeper-nodes:children]
+server-1
+server-2
+server-3
