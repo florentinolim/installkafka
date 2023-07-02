@@ -16,6 +16,7 @@
   version: 1.1.10
 
 - src: git+http://pxgc01/automacao/ansible-roles/ansible-role-ulimit.git
+- src: git+https://github.com/florentinolim/ansible-role-ulimit.git
   name: ulimit
   version: 2.2.1
 
