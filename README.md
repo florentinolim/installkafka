@@ -40,13 +40,13 @@ pxkf01, pxkf02, pxkf03
 ## How to
 
 
-A partir do servidor `pxan02` o projeto deve ser clonado para a instalação das roles/apps
+A partir do servidor `ansible` o projeto deve ser clonado para a instalação das roles/apps
 
 ```
 cd /opt/automacao/observability/data-analytics
 alias git='sudo git' #optional
 
-git  clone http://pxgc01/automacao/observability/data-analytics/kafka.git
+git  clone https://github.com/florentinolim/installkafka.git
 git checkout <BRANCH>
 
 sudo ansible-galaxy install --force --roles-path=$(pwd) --role-file requirements.yml
