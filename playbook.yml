@@ -4,7 +4,7 @@
   become: true
   roles:
     - role: kernel-settings
-    - role: ulimit
+    #- role: ulimit
     - role: java
 
 - name: Deploying microservice
