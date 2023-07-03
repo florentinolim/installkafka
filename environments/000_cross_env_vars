@@ -1,5 +1,5 @@
 ---
-domain: "energia.org.br"
+domain: "localhost"
 
 # kernel role
 kernel_settings_sysctl:
@@ -15,29 +15,6 @@ kernel_settings_sysctl:
     value: 10
   - name: net.ipv4.tcp_retries2
     value: 5
-
-# ulimit role
-ulimit_items:
-  - limit_item: nofile
-    domain: kafka
-    limit_type: soft
-    value: 1048576
-  - limit_item: memlock
-    domain: kafka
-    limit_type: 'soft'
-    value: unlimited
-  - limit_item: memlock
-    domain: kafka
-    limit_type: 'hard'
-    value: unlimited
-  - limit_item: nproc
-    domain: kafka
-    limit_type: soft
-    value: 4096
-  - limit_item: nproc
-    domain: kafka
-    limit_type: hard
-    value: 4096
 
 # java role
 java_packages:

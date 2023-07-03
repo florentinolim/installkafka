@@ -1,5 +1,5 @@
 ---
-kafka_java_heap: -Xms8G -Xmx8G
+kafka_java_heap: -Xms2G -Xmx2G
 kafka_background_threads: 10
 kafka_num_network_threads: 3
 kafka_num_io_threads: 8
